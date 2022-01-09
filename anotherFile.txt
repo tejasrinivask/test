@@ -1,3 +1,4 @@
 Another gitpython test file
 line2 inserted
 line3 inserted
+line4 added
