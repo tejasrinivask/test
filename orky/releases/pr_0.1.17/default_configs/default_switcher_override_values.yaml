@@ -1,0 +1,82 @@
+# cloudProvider can be aws/gcp
+cloudProvider: 
+
+# Unique ID for the POD 
+# recommended convension: 
+# <Environment Type>-<customerID>-<FeedID>-<HeadendID>-<POD Type>
+# POD type can be : Player, Switcher, Doordarshan
+# Environment type can be: production, test, devQA, staging etc
+# Eg: production-NBCU-HD1080i50-nbcu001-player
+# ONLY lowercase albhabets and '-' are allowed.
+uuid: 
+
+# docker secret from cloudProvider
+dockerSecret: 
+
+# required if cloudProvider is gcp
+project: 
+
+# POD type
+# Only 3 values are supported
+podType: switcher
+
+## AWS Availability Zone
+availabilityZone: 
+
+# UUID of the peer POD to receive the input stream
+# Max allowed UUIDs are 2
+peerInputUuid: 
+
+# UUID of the peer POD to deliver the stream
+peerOutputUuid: 
+
+# UUID of the vpcpeer POD to receive the input stream
+vpcPeerInputUuid: 
+
+# UUID of the vpcpeer POD to deliver the stream
+vpcPeerOutputUuid:
+
+# URL for peer output stream protocol
+peerOutputProtocol: 
+
+# URL for public output stream protocol
+publicOutputProtocol: 
+
+# URL for vpcpeer output stream protocol
+vpcPeerOutputProtocol: 
+
+# URL for peer input stream protocol
+peerInputProtocol: 
+
+# URL for public input stream protocol
+publicInputProtocol: 
+
+# URL for vpcpeer input stream protocol
+vpcPeerInputProtocol: 
+
+# ZIXI feeder license key
+zixiFeederLicenceKey:
+
+# Fluentd endpoint to push the logs
+fluentdEndpoint:
+
+# Name for the ingress controller
+ingressControllerName:
+
+# Name space for the ingress controller
+ingressControllerNamespace:
+
+#Configs for Switcher
+switcherMemSize: 3Gi
+switcherCpuSize: 1500m
+switcherEbsSize: 50Gi
+
+#Configs for TARDIS
+tardisMemSize: 1Gi
+tardisCpuSize: 500m
+tardisEbsSize: 25Gi
+
+#Configs for ZIXI
+zixiMemSize: 1.5Gi
+zixiCpuSize: 500m
+zixiEbsSize: 10Gi
