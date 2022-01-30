@@ -16,18 +16,19 @@ dockerSecret:
 # required if cloudProvider is gcp
 project: 
 
-# POD type: player, dd, switcher are allowed
-# Only player is allowed in this file. Do not change this
-podType: player
+# POD type
+# Only 3 values are supported
+podType: switcher
 
 ## AWS Availability Zone
 availabilityZone: 
 
 # UUID of the peer POD to receive the input stream
+# Max allowed UUIDs are 2
 peerInputUuid: 
 
 # UUID of the peer POD to deliver the stream
-peerOutputUuid:
+peerOutputUuid: 
 
 # UUID of the vpcpeer POD to receive the input stream
 vpcPeerInputUuid: 
@@ -53,32 +54,30 @@ publicInputProtocol:
 # URL for vpcpeer input stream protocol
 vpcPeerInputProtocol: 
 
-# Number of sources per CPLive Event ID.
-cpLiveSourceCount: 
-
 # ZIXI feeder license key
-zixiFeederLicenceKey: 
+zixiFeederLicenceKey:
 
 # Fluentd endpoint to push the logs
-fluentdEndpoint: 
+fluentdEndpoint:
 
 # Name for the ingress controller
-ingressControllerName: 
+ingressControllerName:
 
 # Name space for the ingress controller
-ingressControllerNamespace: 
+ingressControllerNamespace:
 
-#Configs for PLAYER
-playerMemSize: 12Gi
-playerCpuSize: 8
-playerEbsSize: 200Gi
+#Configs for Switcher
+switcherMemSize: 3Gi
+switcherCpuSize: 1500m
+switcherEbsSize: 50Gi
 
 #Configs for TARDIS
 tardisMemSize: 1Gi
 tardisCpuSize: 500m
 tardisEbsSize: 25Gi
 
-#Configs for ZIXI 
-zixiMemSize: 1Gi
+#Configs for ZIXI
+zixiMemSize: 1.5Gi
 zixiCpuSize: 500m
-zixiEbsSize: 25Gi
+zixiEbsSize: 10Gi
+

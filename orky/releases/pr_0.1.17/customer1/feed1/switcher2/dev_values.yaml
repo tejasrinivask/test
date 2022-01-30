@@ -1,8 +1,8 @@
 # Dev Only Section
 # Do Not Change
 
-# DOORDARSHAN_CONFIGS
-podConfig1Key: DD
+#SWITCHER CONFIGS
+podConfig1Key: SWITCHER2
 
 # Starting Port Numbers for services
 inputClusterIpStartPortNum: 8200
@@ -10,8 +10,6 @@ outputClusterIpStartPortNum: 8300
 
 inputLoadBalancerStartPortNum: 8400
 outputLoadBalancerStartPortNum: 8500
-
-webrtcDataPortCount: 10
 
 # Root directory for cetral repository
 serviceDiscoveryRepoRootDirectory: amagi
@@ -29,3 +27,4 @@ nodeTaintName: device
 # Priority class
 # Can only be high-priority, normal-priority or placeholder-priority
 priorityClassName:
+
