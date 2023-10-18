@@ -16,6 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Received message $MESSAGE"
-        env:
-          MESSAGE: ${{ inputs.message }}
+          echo "Received message ${{ github.event.inputs.message }}"
