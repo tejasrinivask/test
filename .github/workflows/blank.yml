@@ -17,3 +17,6 @@ jobs:
     steps:
       - run: |
           echo "Received message ${{ github.event.inputs.message }}"
+          echo "Seconf message $MESSAGE"
+        env:
+          MESSAGE: ${{ inputs.message }}
