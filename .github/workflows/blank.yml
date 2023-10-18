@@ -4,7 +4,7 @@ name: CI
 on:
   workflow_dispatch:
     inputs:
-      messsage:
+      message:
         description: 'Message to print'
         type: string
         required: true
